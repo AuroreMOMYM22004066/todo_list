@@ -36,3 +36,163 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  padding: 20px;
+  font-family: Helvetica;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+
+}
+
+#app {
+  background: #fff;
+  border-radius: 4px;
+  padding: 20px;
+  transition: all 0.2s;
+}
+
+li {
+  margin: 8px 0;
+}
+
+h2 {
+  font-weight: bold;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  color: white;
+  background-color: #282c34;
+  border: #282c34 2px solid;
+}
+
+.task-list {
+  margin-top: 20px; /* Marge en haut de la liste */
+  margin-bottom: 20px; /* Marge en bas de la liste */
+}
+
+
+
+
+.task-item {
+  background-color: gainsboro;
+  padding: 10px;
+  display: flex; /* Utiliser flexbox */
+  align-items: center; /* Aligner les éléments sur l'axe vertical */
+}
+
+.animation-exceeded {
+  animation-name: shake;
+  animation-duration: 1s; /* Durée totale de l'animation (1s pour une itération) */
+  animation-iteration-count: infinite; /* Répétition infinie */
+  animation-timing-function: linear ; /* Fonction de temporisation */
+  animation-delay: 5s;
+}
+
+.task-item label {
+  display: flex; /* Permettre au label d'utiliser flexbox */
+  align-items: center; /* Aligner les éléments du label sur l'axe vertical */
+  flex-grow: 1; /* Permettre au label de prendre tout l'espace disponible */
+}
+
+.task-item input {
+  margin-right: 5px;
+}
+
+.task-item .vbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Espacement entre les boutons */
+  margin-left: auto; /* Déplacer les boutons à l'extrême droite */
+}
+
+.task-item button {
+  margin-left: 5px; /* Espacement entre les boutons */
+}
+
+.task-item p {
+  margin: 0 10px; /* Espacement autour du texte de la tâche */
+}
+
+.task-item .task-info {
+  margin-left: auto; /* Déplacer l'élément à l'extrême droite */
+}
+
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-10px) rotate(-5deg); }
+  20%, 40%, 60%, 80% { transform: translateX(10px) rotate(5deg); }
+}
+
+
+.done {
+  color: rgba(0, 0, 0, 0.3);
+  text-decoration: line-through;
+}
+
+input {
+  margin-right: 5px;
+}
+
+.nice {
+  color: forestgreen;
+}
+
+.soon{
+
+}
+
+.urgent {
+  color: darkgoldenrod;
+}
+
+.exceeded {
+  color: darkred;
+}
+
+.header {
+}
+
+.footer {
+  background-color: #282c34;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 20px; /* Ajoute de l'espace à l'intérieur du footer */
+  margin-top: 20px; /* Ajoute de l'espace en haut du footer */
+  /* Vous pouvez également ajouter d'autres propriétés de marge pour les côtés si nécessaire */
+}
+
+
+.vbox {
+  display: flex;
+  flex-direction: column;
+  max-width: 20px;
+}
+
+
+
+.bigBin {
+  margin-left: 82%;
+}
+
+.bin {
+  background: transparent;
+  border: transparent;
+}
+
+.star {
+  background: transparent;
+  border: transparent;
+}
+
+.hide {
+  display: none;
+}
+.show {
+  background: transparent;
+  border: transparent;
+}
